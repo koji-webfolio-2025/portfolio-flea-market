@@ -1,0 +1,18 @@
+.image-wrapper {
+    position: relative;
+}
+
+.image-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.badge.bg-danger {
+    font-size: 2rem; /* フォントサイズ大きめに */
+    padding: 8px 15px; /* パディングで枠を広めに */
+    border-radius: 3px; /* 少し丸み */
+    font-weight: bold; /* 太字で視認性アップ */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* 軽く影をつけて浮かせる */
+    letter-spacing: 1px; /* 文字間隔を少し広くして読みやすく */
+}

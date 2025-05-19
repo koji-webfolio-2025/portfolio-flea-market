@@ -1,0 +1,47 @@
+.image-wrapper {
+    position: relative;
+}
+
+.image-wrapper img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 100%;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.item-card {
+    background-color: #fff;
+    border: none;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.item-card:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+}
+
+.badge.bg-danger {
+    font-size: 2rem; /* 少し大きく */
+    padding: 8px 15px; /* パディング調整 */
+    border-radius: 3px; /* 角丸を少し大きめに */
+    font-weight: bold; /* 太字でしっかり見せる */
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* 軽く影をつけて立体感 */
+}
+
+/* タブの文字色を黒に統一 */
+.nav-tabs .nav-link {
+    color: #000;
+}
+
+/* 選択中タブの色を赤に変更 */
+.nav-tabs .nav-link.active {
+    color: #dc3545; /* Bootstrapの "text-danger" 相当 */
+    font-weight: bold;
+    border-color: transparent transparent #dc3545 transparent; /* 下線を赤に */
+    background-color: transparent; /* 背景透明のまま */
+}

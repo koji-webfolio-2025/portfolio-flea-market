@@ -1,0 +1,38 @@
+.card-img-top {
+    border-bottom: 1px solid #eee;
+}
+.nav-tabs .nav-link {
+    border: none;
+}
+.nav-tabs .nav-link.active {
+    border-bottom: 2px solid;
+}
+
+.item-card {
+    background-color: #fff;
+    border: none;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.item-card:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+.image-wrapper img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 100%;
+}
+
+.badge.bg-danger {
+    font-size: 2rem; /* 少し大きく */
+    padding: 8px 15px; /* パディング調整 */
+    border-radius: 3px; /* 角丸を少し大きめに */
+    font-weight: bold; /* 太字でしっかり見せる */
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* 軽く影をつけて立体感 */
+}
