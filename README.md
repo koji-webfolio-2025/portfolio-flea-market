@@ -1,38 +1,48 @@
-# フリマアプリ（Laravel）
+# フリマアプリ（Blade/Laravel・Stripe決済対応）
 
-## 🛒 概要
-出品・購入・商品検索など、基本的なフリマアプリ機能を備えたLaravel製のポートフォリオアプリです。
+## 概要
+- Laravel（Blade）製のフリマアプリです。
+- Stripeテスト決済に対応し、**商品購入フロー→SOLD反映→履歴管理**まで実装済み。
+- 本番VPS（さくら）上で公開運用中。
+- パーミッション地獄やキャッシュ・ログ・エラーハンドリングも含めて本番運用ノウハウを蓄積。
 
-- Laravel 10 + Bladeテンプレート
-- 商品のCRUD機能（登録・編集・削除・一覧）
-- カート機能・購入履歴（必要に応じて）
-- 認証機能（Fortify）
-
-## 🔗 デモURL
-- https://frima.codeshift-lab.com  
-（ログイン可能なテストアカウントは下記参照）
+## デモURL
+[https://frima.codeshift-lab.com](https://frima.codeshift-lab.com)
 
 ## 👤 テストアカウント（閲覧用）
 - Email: user@example.com  
 - Password: password123
 
-## ⚙️ 使用技術
-- PHP 8.2 / Laravel 10.x
+## 技術スタック
+- Laravel 8 / PHP 7.4
+- Blade（SSR）
 - MySQL 8.0
-- Docker（開発環境）
-- Nginx / Let's Encrypt（本番）
+- Stripe（テスト決済）
+- Nginx / Docker / さくらVPS
 
-## 🛠 主な機能
-- 商品一覧／詳細ページ
-- 商品の出品／編集／削除
-- ログイン／新規登録（Fortify）
-- カート機能（実装している場合）
-- 管理者用画面（実装している場合）
+※ 開発当初はPHP 7.4環境でしたが、現在はPHP 8.3でも安定動作しています  
+※ Laravel 10 / PHP 8.2～8.3の案件・移行も対応可能です
 
-## 🖥 ローカル開発環境セットアップ
+## 主な機能
+- ユーザー登録／ログイン／メール認証（Mailtrap）
+- 商品出品・編集・削除
+- 商品購入（Stripeテスト決済対応）
+- SOLD表示・購入履歴
+- マイページ（出品／購入履歴）
 
+## Stripeテスト決済（デモ用）
+- テストカード番号：`4242-4242-4242-4242`
+- CVC：任意の3桁、有効期限：未来日付
+- このカード情報で商品購入→**実際に決済完了画面まで進みます**
+
+## 特筆事項・アピールポイント
+- VPS本番環境で**パーミッション/キャッシュ/ログ問題**を自力解決し、安定運用に到達
+- Stripeテスト決済連携も**本番同等環境**でクリア
+- エラーログ解析、nginx・php-fpm権限トラブルにも実務レベルで対応
+
+## ローカル開発手順（例）
 ```bash
-git clone git@github.com:koji-webfolio-2025/portfolio-flea-market.git
+git clone https://github.com/koji-webfolio-2025/portfolio-flea-market.git
 cd portfolio-flea-market
 cp .env.example .env
 composer install
